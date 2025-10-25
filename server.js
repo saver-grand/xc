@@ -32,10 +32,26 @@ app.get('/get.php', (req, res) => {
     // Return a simple M3U playlist as an example.
     const m3u = [
       '#EXTM3U',
-      '#EXTINF:-1 tvg-id="channel1" tvg-name="Demo Channel 1" tvg-logo="" group-title="Demo",Demo Channel 1',
-      'http://example.com/stream/channel1/playlist.m3u8',
-      '#EXTINF:-1 tvg-id="channel2" tvg-name="Demo Channel 2" tvg-logo="" group-title="Demo",Demo Channel 2',
-      'http://example.com/stream/channel2/playlist.m3u8'
+'#EXTINF:-1 tvg-id="ae-us-eastern-feed" tvg-name="A&E US Eastern Feed" tvg-logo="" group-title="Live",A&E US Eastern Feed',
+'https://tvpass.org/live/AEEast/sd',
+'#EXTINF:-1 tvg-id="abc-kabc-los-angeles-ca" tvg-name="ABC (KABC) Los Angeles" tvg-logo="" group-title="Live",ABC (KABC) Los Angeles',
+'https://tvpass.org/live/abc-kabc-los-angeles-ca/sd',
+'#EXTINF:-1 tvg-id="abc-wabc-new-york-ny" tvg-name="ABC (WABC) New York, NY" tvg-logo="" group-title="Live",ABC (WABC) New York, NY',
+'https://tvpass.org/live/WABCDT1/sd',
+'#EXTINF:-1 tvg-id="acc-network" tvg-name="ACC Network" tvg-logo="" group-title="Live",ACC Network',
+'https://tvpass.org/live/ACCNetwork/sd',
+'#EXTINF:-1 tvg-id="altitude-sports-denver" tvg-name="Altitude Sports Denver" tvg-logo="" group-title="Live",Altitude Sports Denver',
+'https://tvpass.org/live/altitude-sports-denver/sd',
+'#EXTINF:-1 tvg-id="amc-eastern-feed" tvg-name="AMC Eastern Feed" tvg-logo="" group-title="Live",AMC Eastern Feed',
+'https://tvpass.org/live/AMCEast/sd',
+'#EXTINF:-1 tvg-id="american-heroes-channel" tvg-name="American Heroes Channel" tvg-logo="" group-title="Live",American Heroes Channel',
+'https://tvpass.org/live/AmericanHeroesChannel/sd',
+'#EXTINF:-1 tvg-id="animal-planet-us-east" tvg-name="Animal Planet US East" tvg-logo="" group-title="Live",Animal Planet US East',
+'https://tvpass.org/live/AnimalPlanetEast/sd',
+'#EXTINF:-1 tvg-id="bbc-america-east" tvg-name="BBC America East" tvg-logo="" group-title="Live",BBC America East',
+'https://tvpass.org/live/BBCAmericaEast/sd',
+'#EXTINF:-1 tvg-id="bbc-news-north-america-hd" tvg-name="BBC News North America HD" tvg-logo="" group-title="Live",BBC News North America HD',
+'https://tvpass.org/live/BBCWorldNewsNorthAmerica/sd',
     ].join('\n');
     res.set('Content-Type', 'audio/mpegurl; charset=utf-8');
     return res.send(m3u);
