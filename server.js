@@ -10,7 +10,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Simple in-memory user store for demo (replace with DB)
 const users = {
-  demo: { password: 'demo', allowed: true }
+  mikeph: { password: 'mikeph', allowed: true }
 };
 
 // Utility: authenticate by query
